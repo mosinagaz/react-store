@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { ShoppingCartContext } from "../../Contex";
+import { Icon } from "@iconify/react";
 import NavItem from "./NavItem"
+
 export const Navbar = () => {
+   const context = useContext(ShoppingCartContext);
     let activeStyle = "underline underline-offset-4";
   return (
-    <nav className='flex justify-between items-center z-10 top-0 w-full  py-5 px-8 text-sm font-light '>
+    <nav className='flex justify-between items-center z-10 top-0 w-full bg-[#edf0f7] shadow-sm  py-5 px-8 text-sm font-light fixed'>
         <ul className='flex items-center gap-3'>
             <li className='font-semibold text-lg'>
                <NavItem to='/' >Store</NavItem> 
@@ -39,8 +44,9 @@ export const Navbar = () => {
             <li>
                <NavItem to='/sig-in' activeStyle={activeStyle} >Sig In</NavItem> 
             </li>
-            <li>
-               🛒 0
+            <li className="flex items-center">
+               <Icon icon="fluent:cart-16-regular" width={20}></Icon> 
+              <div className='text-sm'>{context.count}</div> 
             </li>
         </ul>
     </nav>
