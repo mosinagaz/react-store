@@ -13,7 +13,7 @@ export const Home = () => {
     })
   },[])
   return (
-    <div className="grid gap-3 grid-cols-4 w-full max-w-screen-lg">
+    <div className="grid gap-4 grid-cols-4 items-center w-full max-w-screen-lg ">
       {
         items?.map((item)=>(
           <Card key={item.id} data={item}/>
