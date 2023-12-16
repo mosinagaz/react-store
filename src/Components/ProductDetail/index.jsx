@@ -13,7 +13,7 @@ export const ProductDetail = () => {
       </div>
       <div className='m-3'>
         <figure>
-          <img className='w-full h-full rounded-lg' src={context.productDetail.images} alt={context.productDetail.title} />
+          <img className='w-full h-full rounded-lg' src={context.productDetail.image} alt={context.productDetail.title} />
         </figure>
         <p className='flex flex-col mt-2'>
             <span className='text-2xl font-medium mb-2 text-black'>{context.productDetail.price} $</span>

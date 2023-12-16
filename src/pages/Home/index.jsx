@@ -6,6 +6,7 @@ import { ProductDetail } from "../../Components/ProductDetail";
 export const Home = () => {
   const [items, setItems] = useState();
   useEffect(()=>{
+    //axios.get('https://fakestoreapi.com/products?limit=10')
     axios.get('https://api.escuelajs.co/api/v1/products')
     .then((response)=>{
       //console.log(response.data)
